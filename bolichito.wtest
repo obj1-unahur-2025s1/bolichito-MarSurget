@@ -1,0 +1,88 @@
+import cosas.*
+import personas.*
+
+
+test "el rojo es un color fuerte" {
+    assert.that(rojo.fuerte())
+}
+
+test "el verde no es un color fuerte" {
+    assert.notThat(celeste.fuerte())  
+}
+        test "el verde no es un color fuerte2" {
+            assert.that(!celeste.fuerte())  
+        }
+
+
+test "se pede modificar el peso del munieco" {
+  munieco.nuevoPeso(600)
+  assert.equals(600, munieco.peso())
+}
+
+test "el peso original del munieco es 100" {
+  assert.equals(100, munieco.peso())
+}
+
+test "a estefania le gusta la remera" {
+    assert.that(estefania.leGusta(remera))
+}
+test "a estefania no le gusta el munieco" {
+    assert.notThat(estefania.leGusta(munieco))
+}
+test "a Rosa no le gusta una biblioteca" {
+    assert.notThat(rosa.leGusta(biblioteca))
+}
+
+test "a Juan no le gusta una biblioteca" {
+    assert.notThat(juan.leGusta(biblioteca))
+}
+
+test "a Juan no le gusta una remera" {
+    assert.notThat(juan.leGusta(remera))
+}
+test "a Juan le gusta una pelota" {
+    assert.that(juan.leGusta(pelota))
+}
+test "a Juan le gusta una munieco" {
+    assert.that(juan.leGusta(munieco))
+}
+
+test "a Juan le gusta una placa que pese 1500g" {
+  placa.peso() 
+  placa.color()
+  assert.that(juan.leGusta(placa))
+}
+
+test "a estefania  le gusta una placa roja de cualquier peso" {
+  placa.peso() 
+  placa.color() 
+  assert.that(estefania.leGusta(placa))
+}
+test "a estefania le gusta una biblioteca" {
+  assert.that(estefania.leGusta(biblioteca))
+}
+test "a estefania no le gusta una pelota parda de cuero" {
+  assert.notThat(estefania.leGusta(pelota))
+}
+test "a estefania no le gusta un munieco celeste de vidrio" {
+  assert.notThat(estefania.leGusta(munieco))
+}
+
+test "a luisa le gusta objetos de placa de cobre" {
+  assert.that(luisa.leGusta(placa))
+}
+test "a luisa le gusta objetos de munieco de vidrio" {
+  assert.that(luisa.leGusta(munieco))
+}
+
+test "a luisa no le gusta remera" {
+  assert.notThat(luisa.leGusta(remera))
+}
+
+test "a luisa no le gusta la pelota" {
+    assert.notThat(luisa.leGusta(pelota))
+}
+
+
+
+
